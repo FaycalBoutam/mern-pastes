@@ -1,0 +1,37 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "description": "wajba-share is platform for sharing content.",
+  "main": "index.js",
+  "scripts": {
+    "start": "node app",
+    "go": "nodemon app",
+    "build": "cd frontend && npm run build",
+    "install-frontend": "cd frontend && npm install",
+    "heroku-postbuild": "npm run install-frontend && npm run build",
+    "frontend": "npm start --prefix frontend",
+    "dev": "concurrently \"npm run go\" \"npm run frontend \""
+  },
+  "keywords": [
+    "share",
+    "paste",
+    "content",
+    "create"
+  ],
+  "author": "Faycal Boutam",
+  "license": "ISC",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "express-validator": "^6.6.0",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^5.9.27",
+    "shortid": "^2.2.15"
+  },
+  "devDependencies": {
+    "concurrently": "^5.2.0",
+    "nodemon": "^2.0.4"
+  }
+}
